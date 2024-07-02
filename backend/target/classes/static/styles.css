@@ -1,0 +1,16 @@
+
+p{
+    width: 100%;
+    word-spacing: 5px; 
+}
+.title{
+    border: 1px solid;
+}
+table, th, td {
+    text-align: center;
+    width:200px;
+}
+  
+table {
+    width: 100%;
+}
