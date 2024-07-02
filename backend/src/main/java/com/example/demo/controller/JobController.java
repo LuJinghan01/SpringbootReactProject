@@ -29,15 +29,6 @@ public class JobController {
         return jobService.findAll();
     }
 
-    // @GetMapping("/insert")
-    // // @GetMapping("insert")
-    // public List<Jobs> newJob(@RequestParam(value = "name", defaultValue = "test") String name) {
-    //     Random ran = new Random();
-    //     int id = ran.nextInt(1000); 
-    //     jobService.insert(id, name);
-    //     // jobService.insert(id,job.getName());
-    //     return jobService.findAll();
-    // }
     @PostMapping("/jobs/insert")
     public Jobs newJob(@RequestBody Jobs job) {
         Random ran = new Random();

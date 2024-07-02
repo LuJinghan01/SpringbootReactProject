@@ -19,7 +19,7 @@ class JobDataService {
     return http.get(`/update/${id}`, data);
   }
 
-  delete(id) {
+  deleteJob(id) {
 
     // return http.delete(`/delete/${id}`);
     return http.get(`/delete/${id}`);

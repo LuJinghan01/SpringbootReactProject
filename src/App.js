@@ -3,7 +3,6 @@ import './styles.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddJob from "./components/add-job.component";
-import Job from "./components/job.component";
 import JobsList from "./components/job-list.component";
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
@@ -35,7 +34,6 @@ class App extends Component {
             <Route path="/" element={<JobsList/>} />
             <Route path="/jobs" element={<JobsList />} />
             <Route path="/insert" element={<AddJob />} />
-            {/* <Route path="/jobs/:id" element={<Job />} /> */}
           </Routes>
         </div>
         </BrowserRouter>

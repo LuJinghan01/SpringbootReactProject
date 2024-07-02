@@ -1,10 +1,13 @@
 package com.example.demo.bean;
 
-import java.util.Random;
+import java.util.Date;
 
 public class Jobs{
     private Integer id;
     private String name;
+    private boolean status;
+    private Date creationTime;
+    private String userName;
 
     Jobs(){}
 
@@ -20,6 +23,15 @@ public class Jobs{
     public String getName(){
         return name;
     }
+    public boolean getStatus(){
+        return status;
+    }
+    public Date getCreationTime(){
+        return creationTime;
+    }
+    public String getUserName(){
+        return userName;
+    }
 
 
     public void setId(Integer id){
@@ -34,4 +46,3 @@ public class Jobs{
 
     
 }
-

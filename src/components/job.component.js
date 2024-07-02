@@ -14,6 +14,9 @@ class Job extends Component {
       currentJob: {
         id: null,
         name: "",
+        status: null,
+        creation_time: null,
+        user_name: "",
       },
       message: ""
     };
