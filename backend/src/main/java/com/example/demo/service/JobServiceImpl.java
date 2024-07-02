@@ -44,5 +44,12 @@ public class JobServiceImpl implements JobService{
         // TODO Auto-generated method stub
         return mapper.findById(id);
     }
+
+    @Override
+    public void deleteAll() {
+        // TODO Auto-generated method stub
+        mapper.deleteAll();
+        
+    }
     
 }

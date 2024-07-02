@@ -1,12 +1,15 @@
 package com.example.demo.bean;
 
+import java.util.Random;
+
 public class Jobs{
     private Integer id;
     private String name;
 
     Jobs(){}
 
-    Jobs(String name){
+    public Jobs(String name){
+       
         this.name = name;
     }
 

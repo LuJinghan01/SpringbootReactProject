@@ -25,4 +25,7 @@ public interface JobsMapper {
 
     @Delete("delete from jobs where id=#{id};")
     void delete(int id);
+
+    @Delete("delete from jobs;")
+    void deleteAll();
 }

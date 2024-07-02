@@ -15,14 +15,14 @@ class JobDataService {
   }
 
   update(id, data) {
-    return http.put(`/${id}`, data);
-    // return http.get(`/jobs/${id}`);
+    // return http.put(`/${id}`, data);
+    return http.get(`/update/${id}`, data);
   }
 
   delete(id) {
 
-    return http.delete(`/delete/${id}`);
-    // return http.get(`/jobs/${id}`);
+    // return http.delete(`/delete/${id}`);
+    return http.get(`/delete/${id}`);
   }
 
   findById(id){

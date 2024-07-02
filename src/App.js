@@ -35,7 +35,7 @@ class App extends Component {
             <Route path="/" element={<JobsList/>} />
             <Route path="/jobs" element={<JobsList />} />
             <Route path="/insert" element={<AddJob />} />
-            <Route path="/jobs/:id" element={<Job />} />
+            {/* <Route path="/jobs/:id" element={<Job />} /> */}
           </Routes>
         </div>
         </BrowserRouter>
