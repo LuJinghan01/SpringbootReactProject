@@ -10,6 +10,10 @@ class JobDataService {
     // return http.get("/jobs/insert");
   }
 
+  download(){
+    return http.get("/download", { responseType: "blob" });
+  }
+
   get(id) {
     return http.get(`/jobs/${id}`);
   }

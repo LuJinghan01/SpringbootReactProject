@@ -25,6 +25,7 @@ const JobsList = () => {
         console.log(e);
       });
   };
+
   const deleteJob = (jobId) => {
     JobDataService.deleteJob(jobId)
       .then(response => {
@@ -68,6 +69,7 @@ const JobsList = () => {
     {
       title: 'Status',
       dataIndex: 'status',
+      render: status => status ? 1 : 0, 
     },
     {
       title: 'Creation Time',
@@ -77,7 +79,7 @@ const JobsList = () => {
     },
     {
       title: 'User Name',
-      dataIndex: 'username',
+      dataIndex: 'userName',
     },
     {
       title: 'Actions',
@@ -117,6 +119,23 @@ const JobsList = () => {
       });
   };
 
+  // New method for handling download
+  const handleDownload = () => {
+    JobDataService.download()
+      .then(response => {
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'jobs_data.xlsx';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch(error => {
+        console.error('There was a problem with the download operation:', error);
+      });
+  };
   
 
   return (
@@ -143,7 +162,15 @@ const JobsList = () => {
         rowKey="id"
       />
       <div style={{ marginBottom: 16 }}>
-        <Button type="primary"
+        <Button
+          type="primary"
+          className="m-3"
+          onClick={handleDownload}
+        >
+          Download
+        </Button>
+        <Button
+          type="primary"
           className="m-3"
           type="danger"
           onClick={removeAllJobs}
@@ -151,10 +178,8 @@ const JobsList = () => {
           Remove All
         </Button>
       </div>
-
     </div>
   );
 };
 
 export default JobsList;
-

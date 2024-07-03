@@ -1,5 +1,6 @@
 com/example/demo/DemoApplication.class
-com/example/demo/service/JobService.class
+com/example/demo/service/JobServiceImpl.class
 com/example/demo/controller/JobController.class
+com/example/demo/service/JobService.class
 com/example/demo/mapper/JobsMapper.class
 com/example/demo/bean/Jobs.class

@@ -96,8 +96,8 @@ class Job extends Component {
     return (
       <div>
           <div className="edit-form">
-            <h4>Job#{currentJob.id}</h4>
-            <form>
+            {/* <h4>Job#{currentJob.id}</h4> */}
+            {/* <form>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input
@@ -109,23 +109,23 @@ class Job extends Component {
                 />
               </div>
 
-            </form>
+            </form> */}
 
 
-            <button
+            {/* <button
               className="badge badge-danger mr-2"
               onClick={this.deleteJob}
             >
               Delete
-            </button>
+            </button> */}
 
-            <button
+            {/* <button
               type="submit"
               className="badge badge-success"
               onClick={this.updateJob}
             >
               Update
-            </button>
+            </button> */}
             <p>{this.state.message}</p>
           </div>
           </div>
