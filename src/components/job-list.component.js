@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Table } from 'antd';
+import { Upload, Button, Table } from 'antd';
 import JobDataService from "../jobs.service";
 import "../styles.css";
 
@@ -136,6 +136,23 @@ const JobsList = () => {
         console.error('There was a problem with the download operation:', error);
       });
   };
+
+  const handleUpload = () => {
+    if (file) {
+      const formData = new FormData();
+      formData.append('file', file);
+
+      JobDataService.upload(formData)
+        .then(response => {
+          console.log('File uploaded successfully:', response.data);
+        })
+        .catch(error => {
+          console.error('There was a problem with the upload operation:', error);
+        });
+    } else {
+      console.error('No file selected for upload.');
+    }
+  };
   
 
   return (
@@ -168,6 +185,14 @@ const JobsList = () => {
           onClick={handleDownload}
         >
           Download
+        </Button>
+        
+        <Button
+          type="primary"
+          className="m-3"
+          onClick={handleUpload}
+        >
+          Upload
         </Button>
         <Button
           type="primary"

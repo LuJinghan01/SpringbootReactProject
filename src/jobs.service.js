@@ -36,7 +36,9 @@ class JobDataService {
   deleteAll(){
     return http.get(`/delete`);
   }
-
+  upload(){
+    return http.get("/upload");
+  }
 }
 
 export default new JobDataService();
