@@ -5,6 +5,7 @@
 **backend: springboot, mysql**  
 **mvn spring-boot:run**  
 **mvn clean install**  
+**java -jar -Dserver.port=8083 target/demo-0.0.1-SNAPSHOT.jar**  
 ***
 **nginx**  
 **start: nginx**  
