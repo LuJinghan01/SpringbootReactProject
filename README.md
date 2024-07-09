@@ -10,4 +10,6 @@
 **nginx**  
 **start: nginx**  
 **stop: nginx -s stop**  
-**有改动：nginx -s reload**
+**有改动：nginx -s reload**  
+**sudo nano /opt/homebrew/etc/nginx/nginx.conf**
+
