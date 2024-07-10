@@ -9,16 +9,31 @@ npm run build
 ***
 backend: springboot, mysql  
 ```
-mvn spring-boot:run  
-mvn clean install  
+mvn spring-boot:run
+```
+rebuild maven project
+```
+mvn clean install
+```
+```
 java -jar -Dserver.port=8083 target/demo-0.0.1-SNAPSHOT.jar
 ```  
 ***
-nginx  
+nginx 
+start server:
 ```
-start: nginx  
-stop: nginx -s stop  
-nginx -s reload  
+nginx
+```
+stop nginx:
+```
+nginx -s stop
+```
+load changes to config files
+```
+nginx -s reload
+```
+修改配置文件
+```  
 sudo nano /opt/homebrew/etc/nginx/nginx.conf
 ```  
 ***  
