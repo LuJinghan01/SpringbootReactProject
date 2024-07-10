@@ -1,17 +1,26 @@
-**frontend: React**  
-**npm start**  
-**工程文件：npm run build**
+frontend: React  
+```
+npm start
+```  
+生成工程文件：
+```
+npm run build
+```
 ***
-**backend: springboot, mysql**  
-**mvn spring-boot:run**  
-**mvn clean install**  
-**java -jar -Dserver.port=8083 target/demo-0.0.1-SNAPSHOT.jar**  
+backend: springboot, mysql  
+```
+mvn spring-boot:run  
+mvn clean install  
+java -jar -Dserver.port=8083 target/demo-0.0.1-SNAPSHOT.jar
+```  
 ***
-**nginx**  
-**start: nginx**  
-**stop: nginx -s stop**  
-**有改动：nginx -s reload**  
-**sudo nano /opt/homebrew/etc/nginx/nginx.conf**  
+nginx  
+```
+start: nginx  
+stop: nginx -s stop  
+nginx -s reload  
+sudo nano /opt/homebrew/etc/nginx/nginx.conf
+```  
 ***  
 sample workflow of running jar file using nohup:  
 start program with nohup
