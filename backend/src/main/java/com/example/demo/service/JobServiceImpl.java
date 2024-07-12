@@ -46,11 +46,11 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
-    @Transactional()
-    public void deleteAll() {
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteAll() throws Exception {
         // mapper.deleteAll();
         // won't roll back, because it catches the exception
-        try {
+        // try {
             List<Jobs> jobs = mapper.findAll();
             for (int i = 0; i < jobs.size(); i++) {
                 mapper.delete(jobs.get(i).getId());
@@ -58,10 +58,10 @@ public class JobServiceImpl implements JobService {
                     throw new Exception("some error occured");
                 }
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("run time exception thrown");
-        }
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        //     throw new RuntimeException("run time exception thrown");
+        // }
 
     }
 
