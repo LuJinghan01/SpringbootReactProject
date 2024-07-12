@@ -6,8 +6,11 @@ import com.example.demo.bean.Jobs;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @MapperScan
 public interface JobsMapper {
@@ -15,7 +18,7 @@ public interface JobsMapper {
     List<Jobs> findAll();
 
     @Insert("insert into jobs (id,name) values (#{id},#{name})")
-    void insert(int id, String name);
+   void insert(@Param("id") int id,@Param("name") String name);
 
     @Select("select * from jobs where id=#{id}")
     Jobs findById(int id);
