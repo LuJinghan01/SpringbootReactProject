@@ -50,3 +50,11 @@ pgrep -f 'java -jar'
 ```
 kill -9 <PID>
 ```
+***  
+If needs to compile maven project with jdk8:  
+```
+jenv local 1.8
+```
+```
+jenv global 1.8
+```
