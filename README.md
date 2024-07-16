@@ -42,6 +42,14 @@ start program with nohup
 ```
 nohup java -jar -Dserver.port=8083 target/demo-0.0.1-SNAPSHOT.jar &
 ```
+如果要停止运行，你需要使用以下命令查找到 nohup 运行脚本到 PID，然后使用 kill 命令来删除：
+```
+ps -aux | grep "runoob.sh"
+```
+参数说明：  
+a : 显示所有程序  
+u : 以用户为主的格式来显示  
+x : 显示所有程序，不区分终端机    
 exit the terminal or whatever else you would like to do "&" puts the program in background for running  
 look for the pid if you would like to kill the jar program afterwards
 ```
