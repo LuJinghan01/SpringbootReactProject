@@ -58,3 +58,21 @@ jenv local 1.8
 ```
 jenv global 1.8
 ```
+###
+project description:  
+frontend:  
+1. Using Ant Design open source platform to create a list based table with select, sort and search by ID funcations  
+2. Implemented download as excel files button, delete, and delete all buttons  
+###
+nginx:  
+1. Resolve cors (cross-origin resource sharing) probelms using nginx  
+2. Running spring boot application on multiple servers and using nginx to balance sending requests to these servers  
+###
+backend:  
+1. Using MVC (Model View Controller) and three-tier architecture to structure the project  
+2. Implemented RESTful API, added JWT authentication and spring security for user login  
+3. Using Easy Excel from Alibaba for downloading database table as Excel files to local machines.  
+4. Using Mybatis to communicate between mysql database, added transaction for data roll back   
+
+
+
